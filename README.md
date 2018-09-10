@@ -1,4 +1,4 @@
-CSS Images
+CSS Only Images
 ============
 
 Collection of all CSS only images made on CodePen and separately. 
