@@ -1,0 +1,206 @@
+//Color Variables
+$bg: #91c0b8
+$white: #EEEADE
+$darker-white: lighten(#E0DAC0, 5%)
+$black: #2E2D31
+$pink: #EFB0BB
+$brown: #474A58
+$tan: #F8EAD7
+
+//Mixins
+@mixin stripe($top, $left, $deg)
+	position: absolute
+	width: 0
+	height: 0
+	border: 15px solid transparent
+	border-left-color: $black
+	top: $top
+	left: $left
+	transform: rotate($deg)
+
+//Container
+body
+	background-color: $bg
+	margin: 0
+	padding: 0
+.container
+	position: relative
+	margin: 0 auto
+	display: flex
+	justify-content: space-evenly
+	width: 80%
+	height: 300px
+	top: 50%
+	transform: translateY(50%)
+
+//Main Base Styles
+.head
+	position: relative
+	width: 300px
+	height: 300px
+	.eye, .snout, .nostril, .mouth, .ear, .innerear
+		position: absolute
+	.face
+		border-radius: 50%
+		width: 300px
+		height: 300px
+	.eye
+		width: 20px
+		top: 33%
+	.ear
+		width: 90px
+		height: 90px
+		border-radius: 50%
+		z-index: -10
+		.innerear
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			bottom: 30%
+			left: 15%
+		&.right
+			right: 0
+			.innerear
+				left: 25%
+	.mouth
+		border: 10px solid $black
+		border-top: none
+		border-radius: 0 0 45px 45px
+		
+//Tiger styles
+.tiger
+	.ear
+		background-color: $white
+		.innerear
+			background-color: $black
+	.face
+		background-color: $white
+		.eye
+			border-radius: 50%
+			height: 20px
+			left: 75px
+			background-color: $black
+			&:after
+				content: ''
+				position: absolute
+				width: 30px
+				height: 10px
+				border-radius: 10px
+				top: -35px
+				left: -10px
+				transform: rotate(10deg)
+				background-color: $black
+			&.right
+				left: 200px
+				&:after
+					right: -10px
+					left: 0
+					transform: rotate(-10deg)
+		.nose
+			width: 50px
+			height: 150px
+			background-color: $darker-white
+			margin: 0 auto
+			position: relative
+			border-radius: 4px 4px 20px 20px
+			.snout
+				bottom: 0
+				width: 50px
+				height: 25px
+				background-color: $pink
+				border-radius: 0px 0px 20px 20px
+				.nostril
+					bottom: 0
+					left: 15px
+					width: 3px
+					height: 8px
+					background-color: $black
+					&.right
+						left: 30px
+		.mouth
+			width: 70px
+			height: 30px
+
+			bottom: 80px
+			left: 105px
+		.stripe-1
+			@include stripe(50px, 29px, 35deg)
+		.stripe-2
+			@include stripe(150px, 0px, -5deg)
+		.stripe-3
+			@include stripe(240px, 50px, -50deg)
+		.stripe-4
+			@include stripe(270px, 135px, -90deg)
+		.stripe-5
+			@include stripe(240px, 220px, -130deg)
+		.stripe-6
+			@include stripe(150px, 270px, -175deg)
+		.stripe-7
+			@include stripe(50px, 241px, -215deg)
+		
+//Bear Styles
+.bear
+	.ear
+		background-color: $brown
+		width: 85px
+		height: 100px
+		.innerear
+			background-color: $black
+	.face
+		background-color: $brown
+		.eye
+			background-color: $white
+			height: 30px
+			left: 100px
+			border-radius: 40%
+			&.right
+				left: 175px
+			&:after
+				content: ''
+				position: absolute
+				width: 25px
+				height: 15px
+				border-top: 10px solid $black
+				border-bottom: none
+				border-radius: 50% 50% 5px 5px
+				top: -35px
+				left: -6px
+			&:before
+				content: ''
+				position: absolute
+				width: 12px
+				height: 12px
+				border-radius: 50%
+				background-color: $brown
+				top: -30px
+				left: 0px
+				z-index: 10
+			.pupil
+				position: absolute
+				width: 15px
+				height: 30px
+				bottom: 0
+				right: -1px
+				border-radius: 50%
+				background-color: $black
+		.snout
+			background-color: $tan
+			position: absolute
+			width: 130px
+			height: 100px
+			border-radius: 50%
+			bottom: 25px
+			left: 80px
+			.nose
+				position: absolute
+				background-color: $black
+				width: 50px
+				height: 40px
+				border-radius: 15px 15px 25px 25px
+				left: 40px
+				top: -5px
+			.mouth
+				width: 40px
+				height: 20px
+				bottom: 20px
+				left: 35px

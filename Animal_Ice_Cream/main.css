@@ -1,0 +1,356 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background-color: #aebff7;
+}
+
+.main {
+  padding-top: 5%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 650px) {
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.main .icecream_container {
+  position: relative;
+  width: 30%;
+  height: auto;
+  margin: .5em;
+  max-height: 300px;
+}
+
+@media (max-width: 650px) {
+  .main .icecream_container {
+    width: 50%;
+    margin: 1em auto;
+  }
+}
+
+.scoop_container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.scoop_container .scoop {
+  position: relative;
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+  border-radius: 50%;
+  margin: 0 auto -19%;
+}
+
+.scoop_container .scoop .eyes {
+  width: 100%;
+}
+
+.scoop_container .scoop .eyes::before, .scoop_container .scoop .eyes::after {
+  position: absolute;
+  top: auto;
+  width: 8%;
+  height: 10%;
+  content: "";
+  border-radius: 45%;
+  background-color: inherit;
+  bottom: 55%;
+}
+
+.scoop_container .scoop .eyes::before {
+  left: 20%;
+}
+
+.scoop_container .scoop .eyes::after {
+  right: 20%;
+}
+
+.scoop_container .scoop .nose {
+  position: absolute;
+  top: auto;
+  width: 8%;
+  height: auto;
+  padding-bottom: 8%;
+  bottom: 48%;
+  left: 46%;
+}
+
+.icecream_cone {
+  position: relative;
+  z-index: 10;
+  width: 55%;
+  height: 0;
+  padding-bottom: 20%;
+  margin: 0 auto 20%;
+  border-radius: 15% 15% 100% 100%;
+  background-color: #f7e6ae;
+  -webkit-box-shadow: inset 0 -0.25em 1em #f0d168;
+          box-shadow: inset 0 -0.25em 1em #f0d168;
+}
+
+.icecream_cone::before {
+  position: absolute;
+  top: auto;
+  width: 70%;
+  height: 110%;
+  content: "";
+  bottom: -90%;
+  left: 15%;
+  border-radius: 0 0 15% 15%;
+  background-color: #f2d880;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, #f7e6ae)), -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, #f7e6ae));
+  background-image: linear-gradient(90deg, transparent 50%, #f7e6ae 50%), linear-gradient(transparent 50%, #f7e6ae 50%);
+  background-size: 30% 55%;
+}
+
+.kitty .scoop_kitty {
+  position: relative;
+  background-color: #092227;
+}
+
+.kitty .scoop_kitty .eyes {
+  background-color: #FFF;
+}
+
+.kitty .scoop_kitty .nose {
+  background-color: #FDA7DF;
+  border-radius: 80% 150% 250%;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.kitty .scoop_kitty .whiskers {
+  position: absolute;
+  top: auto;
+  width: 50%;
+  height: auto;
+  padding-bottom: 10%;
+  bottom: 50%;
+}
+
+.kitty .scoop_kitty .whiskers::before, .kitty .scoop_kitty .whiskers::after {
+  z-index: 100;
+  position: absolute;
+  top: auto;
+  width: 25%;
+  height: auto;
+  content: "";
+  padding-bottom: 5%;
+  border-radius: 40%;
+  background-color: #FFF;
+}
+
+.kitty .scoop_kitty .whiskers_left {
+  left: 2%;
+}
+
+.kitty .scoop_kitty .whiskers_left::before {
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.kitty .scoop_kitty .whiskers_left::after {
+  bottom: -50%;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.kitty .scoop_kitty .whiskers_right {
+  right: 2%;
+}
+
+.kitty .scoop_kitty .whiskers_right::before, .kitty .scoop_kitty .whiskers_right::after {
+  right: 0%;
+}
+
+.kitty .scoop_kitty .whiskers_right::before {
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.kitty .scoop_kitty .whiskers_right::after {
+  bottom: -50%;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.kitty .ear {
+  z-index: -1;
+  position: absolute;
+  top: 5%;
+  width: 30%;
+  height: 0;
+  padding-bottom: 20%;
+  background-color: #092227;
+}
+
+.kitty .ear .ear_inner {
+  position: absolute;
+  top: 25%;
+  width: 50%;
+  height: 50%;
+  background-color: #FDA7DF;
+}
+
+.kitty .ear_left {
+  border-radius: 30% 150% 60% 100%;
+  left: 20%;
+}
+
+.kitty .ear_left .ear_inner {
+  border-radius: 30% 150% 60% 100%;
+  left: 20%;
+}
+
+.kitty .ear_right {
+  border-radius: 150% 30% 100% 60%;
+  right: 20%;
+}
+
+.kitty .ear_right .ear_inner {
+  border-radius: 150% 30% 100% 60%;
+  right: 20%;
+}
+
+.dog .scoop_dog {
+  position: relative;
+  background-color: #C39B78;
+}
+
+.dog .scoop_dog .eyes {
+  background-color: #092227;
+}
+
+.dog .scoop_dog .snout {
+  position: absolute;
+  top: auto;
+  width: 40%;
+  height: auto;
+  padding-bottom: 40%;
+  border-radius: 50%;
+  left: 30%;
+  bottom: 25%;
+  background-color: #d3b59b;
+}
+
+.dog .scoop_dog .nose {
+  background-color: #2a1d12;
+  border-radius: 100% 100% 180%;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.dog .ear {
+  z-index: -1;
+  position: absolute;
+  top: 5%;
+  width: 20%;
+  height: 0;
+  padding-bottom: 25%;
+  background-color: #4d3622;
+}
+
+.dog .ear_left {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  border-radius: 45% 150% 100% 100%;
+  left: 20%;
+}
+
+.dog .ear_right {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+  border-radius: 150% 45% 100% 100%;
+  right: 20%;
+}
+
+.bear .scoop_bear {
+  position: relative;
+  background-color: #CF825D;
+}
+
+.bear .scoop_bear .eyes {
+  background-color: #092227;
+}
+
+.bear .scoop_bear .snout {
+  position: absolute;
+  top: auto;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  bottom: 25%;
+  left: 30%;
+  background-color: #e6bfac;
+}
+
+.bear .scoop_bear .nose {
+  background-color: #23120a;
+  border-radius: 100% 50% 100%;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.bear .ear {
+  z-index: -1;
+  position: absolute;
+  top: -5%;
+  width: 20%;
+  height: 0;
+  padding-bottom: 20%;
+  border-radius: 50%;
+  background-color: #CF825D;
+}
+
+.bear .ear .innerear {
+  position: absolute;
+  top: 25%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: #e6bfac;
+}
+
+.bear .ear_left {
+  left: 20%;
+}
+
+.bear .ear_left .innerear {
+  left: 25%;
+}
+
+.bear .ear_right {
+  right: 20%;
+}
+
+.bear .ear_right .innerear {
+  right: 20%;
+}
+/*# sourceMappingURL=main.css.map */

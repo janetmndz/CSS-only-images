@@ -1,0 +1,220 @@
+//Color Variables
+$bg: #aebff7
+$cone: #f7e6ae
+$scoop: #FFF
+$kittyscoop: #092227
+$dogscoop: #C39B78
+$bearscoop: #CF825D
+$pink: #FDA7DF
+
+//Mixins
+@mixin absolute_pos($top, $width, $height)
+	position: absolute
+	top: $top
+	width: $width
+	height: $height
+@mixin small
+	@media (max-width: 650px) 
+		@content
+//Resets 
+*, *::before, *::after
+	box-sizing: border-box
+html, body
+	padding: 0
+	margin: 0
+	height: 100%
+//Layout
+body
+	background-color: $bg
+.main
+	padding-top: 5%
+	width: 100%
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: space-between
+	@include small
+		flex-direction: column
+	.icecream_container
+		position: relative
+		width: 30%
+		height: auto
+		margin: .5em
+		max-height: 300px
+		@include small
+			width: 50%
+			margin: 1em auto
+//Base Ice Cream Styles
+.scoop_container
+	position: relative
+	width: 100%
+	height: auto
+	.scoop
+		position: relative
+		width: 50%
+		height: 0
+		padding-bottom: 50%
+		border-radius: 50%
+		margin: 0 auto -19%
+		.eyes
+			width: 100%
+			&::before, &::after
+				@include absolute_pos(auto, 8%, 10%)
+				content: ""
+				border-radius: 45%
+				background-color: inherit
+				bottom: 55%
+			&::before
+				left: 20%
+			&::after
+				right: 20%
+		.nose
+			@include absolute_pos(auto, 8%, auto)
+			padding-bottom: 8%
+			bottom: 48%
+			left: 46%
+.icecream_cone
+	position: relative
+	z-index: 10
+	width: 55%
+	height: 0
+	padding-bottom: 20%
+	margin: 0 auto 20%
+	border-radius: 15% 15% 100% 100%
+	background-color: $cone
+	box-shadow: inset 0 -.25em 1em darken($cone, 15%)
+	&::before
+		@include absolute_pos(auto, 70%, 110%)
+		content: ""
+		bottom: -90%
+		left: 15%
+		border-radius: 0 0 15% 15%
+		background-color: darken($cone, 10%)
+		background-image: linear-gradient(90deg, transparent 50%, $cone 50%), linear-gradient(transparent 50%, $cone 50%)
+		background-size: 30% 55%
+	
+//Custom Scoops
+//-->Kitty
+.kitty
+	.scoop_kitty
+		position: relative
+		background-color: $kittyscoop
+		.eyes
+			background-color: #FFF
+		.nose
+			background-color: $pink
+			border-radius: 80% 150% 250%
+			transform: rotate(225deg)
+		.whiskers
+			@include absolute_pos(auto, 50%, auto)
+			padding-bottom: 10%
+			bottom: 50%
+			&::before, &::after
+				z-index: 100
+				@include absolute_pos(auto, 25%, auto)
+				content: ""
+				padding-bottom: 5%
+				border-radius: 40%
+				background-color: #FFF
+		.whiskers_left
+			left: 2%
+			&::before
+				transform: rotate(10deg)
+			&::after
+				bottom: -50%
+				transform: rotate(-10deg)
+		.whiskers_right
+			right: 2%
+			&::before, &::after
+				right: 0%
+			&::before
+				transform: rotate(-10deg)
+			&::after
+				bottom: -50%
+				transform: rotate(10deg)
+	.ear
+		z-index: -1
+		@include absolute_pos(5%, 30%, 0)
+		padding-bottom: 20%
+		background-color: $kittyscoop
+		& .ear_inner
+			@include absolute_pos(25%, 50%, 50%)
+			background-color: $pink	
+	.ear_left
+		border-radius: 30% 150% 60% 100% 
+		left: 20%
+		& .ear_inner
+			border-radius: 30% 150% 60% 100%
+			left: 20%
+	.ear_right
+		border-radius: 150% 30% 100% 60% 
+		right: 20%
+		& .ear_inner
+			border-radius: 150% 30% 100% 60%
+			right: 20%
+//-->Dog
+.dog
+	.scoop_dog
+		position: relative
+		background-color: $dogscoop
+		.eyes
+			background-color: #092227
+		.snout
+			@include absolute_pos(auto, 40%, auto)
+			padding-bottom: 40%
+			border-radius: 50%
+			left: 30%
+			bottom: 25%
+			background-color: lighten($dogscoop, 10%)
+		.nose
+			background-color: darken($dogscoop, 50%)
+			border-radius: 100% 100% 180%
+			transform: rotate(225deg)
+	.ear
+		z-index: -1
+		@include absolute_pos(5%, 20%, 0)
+		padding-bottom: 25%
+		background-color: darken($dogscoop, 40%)
+	.ear_left
+		transform: rotate(30deg)
+		border-radius: 45% 150% 100% 100% 
+		left: 20%
+	.ear_right
+		transform: rotate(-30deg)
+		border-radius: 150% 45% 100% 100% 
+		right: 20%	
+//-->Bear
+.bear
+	.scoop_bear
+		position: relative
+		background-color: $bearscoop
+		.eyes
+			background-color: #092227
+		.snout
+			@include absolute_pos(auto, 40%, 40%)
+			border-radius: 50%
+			bottom: 25%
+			left: 30%
+			background-color: lighten($bearscoop, 20%)
+		.nose
+				background-color: darken($bearscoop, 50%)
+				border-radius: 100% 50% 100%
+				transform: rotate(225deg)
+	.ear
+		z-index: -1
+		@include absolute_pos(-5%, 20%, 0)	
+		padding-bottom: 20%
+		border-radius: 50%
+		background-color: $bearscoop
+		.innerear
+			@include absolute_pos(25%, 50%, 50%)
+			border-radius: 50%
+			background-color: lighten($bearscoop, 20%)
+	.ear_left
+		left: 20%
+		.innerear
+			left: 25%
+	.ear_right
+		right: 20%
+		.innerear
+			right: 20%

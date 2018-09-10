@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300')
+
+$default-margin: 0 auto
+$default-font: "Rubik", sans-serif
+$ribbon-color: #5C6BC0
+
+%ba-base
+	content: ""
+	position: absolute
+	display: block
+
+body
+	background-color: #FDFDFD
+	margin: 0
+	padding: 0
+
+.container
+	width: 80%
+	height: 30em
+	margin: $default-margin
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	align-content: space-around
+	.title
+		font:
+			family: $default-font
+			size: 3em
+		color: $ribbon-color
+		text-align: center
+	.ribbon
+		position: relative
+		width: 60%
+		max-width: 500px
+		height: 5em
+		margin: $default-margin
+		&:before, &:after
+			@extend %ba-base
+		.ribbon-content
+			font:
+				family: $default-font
+				size: 1.15em
+			text-align: center
+			display: block
+			height: 1.5em
+			width: 80%
+			margin: $default-margin
+			padding: .55em
+			color: #fff
+			background-color: $ribbon-color
+			&:before, &:after
+				@extend %ba-base
+	
+.container
+	#one
+		&:before, &:after
+			width: 1.5em
+			bottom: 10%
+			border: 1.5em solid $ribbon-color
+			z-index: -2
+		&:before
+			left: -1%
+			border:
+				right-width: 1.25em
+				left-color: transparent
+		&:after
+			right: -1%
+			border:
+				left-width: 1.25em
+				right-color: transparent
+		
+		.ribbon-content
+			&:before, &:after
+				bottom: -25%
+				border-style: solid
+				border-color: darken( $ribbon-color, 10% ) transparent transparent transparent
+				z-index: 1
+			&:before
+				left: 2em
+				border-width: 1.5em 0 1.5em 1.5em
+			&:after
+				right: 2em
+				border-width: 1.5em 1.5em 1.5em 0
+
+		
+	#two
+		width: 29em
+		margin-top: 2em
+		&:before, &:after
+			width: 1.5em
+			border: 1.5em solid $ribbon-color
+			z-index: -2
+		&:before
+			transform: rotate(-7deg)
+			top: -.1em
+			left: -2%
+			border:
+				top-right-radius: .55em
+				right-width: 1.5em
+				left-color: transparent
+		&:after
+			transform: rotate(-7deg)
+			bottom: 2em
+			right: -2.5%
+			border:
+				bottom-left-radius: .55em
+				left-width: 1.5em
+				right-color: transparent
+		.ribbon-content
+			transform: rotate(-7deg)
+			&:before, &:after
+				border-style: solid
+				z-index: 1
+			&:before
+				border-color: transparent transparent darken( $ribbon-color, 10% ) transparent
+				transform: rotate(-7deg)
+				bottom: 2.5em
+				left: -.1em
+				border-width: 1.5em 0 1.5em 1.5em
+			&:after
+				border-color: darken( $ribbon-color, 10% ) transparent transparent transparent
+				top: 2.5em
+				right: -.1em
+				border-width: 1.5em 1.5em 1.5em 0
+	
+	#three
+		&:before, &:after
+			width: 1.5em
+			bottom: -1em
+			border: 1.5em solid $ribbon-color
+			z-index: -2
+		&:before
+			left: -2em
+			border:
+				right-width: 1em
+				left-color: transparent
+		&:after
+			right: -2em
+			border:
+				left-width: 1em
+				right-color: transparent
+		
+		.left-sq, .right-sq
+			position: absolute
+			display: block
+			width: 3em
+			height: 3em
+			top: 1.5em
+			background-color: $ribbon-color
+			margin: $default-margin
+			&:before
+				@extend %ba-base
+				z-index: 1
+				bottom: -3em
+				border:
+					style: solid
+					color: darken( $ribbon-color, 10% ) transparent transparent transparent
+		
+		.left-sq
+			left: 0.5em
+			&:before
+				border-width: 1.5em 0 1.5em 1.5em
+		
+		.right-sq
+			right: 0.5em
+			&:before
+				right: 0
+				border-width: 1.5em 1.5em 1.5em 0
+		
+		.ribbon-content
+			&:before, &:after
+				@extend %ba-base
+				z-index: 1
+				border:
+					style: solid
+					color: darken( $ribbon-color, 10% ) transparent transparent transparent
+			&:before
+				left: 1.5em
+				bottom: -1.15em
+				border-width: 1.5em 0 1.5em 1.5em
+			&:after
+				right: 1.5em
+				bottom: -1.15em
+				border-width: 1.5em 1.5em 1.5em 0

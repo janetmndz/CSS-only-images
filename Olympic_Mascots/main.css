@@ -1,0 +1,321 @@
+body {
+  background-color: #91c0b8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 80%;
+  height: 300px;
+  top: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.head {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.head .eye, .head .snout, .head .nostril, .head .mouth, .head .ear, .head .innerear {
+  position: absolute;
+}
+
+.head .face {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+}
+
+.head .eye {
+  width: 20px;
+  top: 33%;
+}
+
+.head .ear {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  z-index: -10;
+}
+
+.head .ear .innerear {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  bottom: 30%;
+  left: 15%;
+}
+
+.head .ear.right {
+  right: 0;
+}
+
+.head .ear.right .innerear {
+  left: 25%;
+}
+
+.head .mouth {
+  border: 10px solid #2E2D31;
+  border-top: none;
+  border-radius: 0 0 45px 45px;
+}
+
+.tiger .ear {
+  background-color: #EEEADE;
+}
+
+.tiger .ear .innerear {
+  background-color: #2E2D31;
+}
+
+.tiger .face {
+  background-color: #EEEADE;
+}
+
+.tiger .face .eye {
+  border-radius: 50%;
+  height: 20px;
+  left: 75px;
+  background-color: #2E2D31;
+}
+
+.tiger .face .eye:after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 10px;
+  border-radius: 10px;
+  top: -35px;
+  left: -10px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  background-color: #2E2D31;
+}
+
+.tiger .face .eye.right {
+  left: 200px;
+}
+
+.tiger .face .eye.right:after {
+  right: -10px;
+  left: 0;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+.tiger .face .nose {
+  width: 50px;
+  height: 150px;
+  background-color: #e8e4d1;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 4px 4px 20px 20px;
+}
+
+.tiger .face .nose .snout {
+  bottom: 0;
+  width: 50px;
+  height: 25px;
+  background-color: #EFB0BB;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.tiger .face .nose .snout .nostril {
+  bottom: 0;
+  left: 15px;
+  width: 3px;
+  height: 8px;
+  background-color: #2E2D31;
+}
+
+.tiger .face .nose .snout .nostril.right {
+  left: 30px;
+}
+
+.tiger .face .mouth {
+  width: 70px;
+  height: 30px;
+  bottom: 80px;
+  left: 105px;
+}
+
+.tiger .face .stripe-1 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-left-color: #2E2D31;
+  top: 50px;
+  left: 29px;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+.tiger .face .stripe-2 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-left-color: #2E2D31;
+  top: 150px;
+  left: 0px;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+.tiger .face .stripe-3 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-left-color: #2E2D31;
+  top: 240px;
+  left: 50px;
+  -webkit-transform: rotate(-50deg);
+          transform: rotate(-50deg);
+}
+
+.tiger .face .stripe-4 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-left-color: #2E2D31;
+  top: 270px;
+  left: 135px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.tiger .face .stripe-5 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-left-color: #2E2D31;
+  top: 240px;
+  left: 220px;
+  -webkit-transform: rotate(-130deg);
+          transform: rotate(-130deg);
+}
+
+.tiger .face .stripe-6 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-left-color: #2E2D31;
+  top: 150px;
+  left: 270px;
+  -webkit-transform: rotate(-175deg);
+          transform: rotate(-175deg);
+}
+
+.tiger .face .stripe-7 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 15px solid transparent;
+  border-left-color: #2E2D31;
+  top: 50px;
+  left: 241px;
+  -webkit-transform: rotate(-215deg);
+          transform: rotate(-215deg);
+}
+
+.bear .ear {
+  background-color: #474A58;
+  width: 85px;
+  height: 100px;
+}
+
+.bear .ear .innerear {
+  background-color: #2E2D31;
+}
+
+.bear .face {
+  background-color: #474A58;
+}
+
+.bear .face .eye {
+  background-color: #EEEADE;
+  height: 30px;
+  left: 100px;
+  border-radius: 40%;
+}
+
+.bear .face .eye.right {
+  left: 175px;
+}
+
+.bear .face .eye:after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 15px;
+  border-top: 10px solid #2E2D31;
+  border-bottom: none;
+  border-radius: 50% 50% 5px 5px;
+  top: -35px;
+  left: -6px;
+}
+
+.bear .face .eye:before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #474A58;
+  top: -30px;
+  left: 0px;
+  z-index: 10;
+}
+
+.bear .face .eye .pupil {
+  position: absolute;
+  width: 15px;
+  height: 30px;
+  bottom: 0;
+  right: -1px;
+  border-radius: 50%;
+  background-color: #2E2D31;
+}
+
+.bear .face .snout {
+  background-color: #F8EAD7;
+  position: absolute;
+  width: 130px;
+  height: 100px;
+  border-radius: 50%;
+  bottom: 25px;
+  left: 80px;
+}
+
+.bear .face .snout .nose {
+  position: absolute;
+  background-color: #2E2D31;
+  width: 50px;
+  height: 40px;
+  border-radius: 15px 15px 25px 25px;
+  left: 40px;
+  top: -5px;
+}
+
+.bear .face .snout .mouth {
+  width: 40px;
+  height: 20px;
+  bottom: 20px;
+  left: 35px;
+}
+/*# sourceMappingURL=main.css.map */

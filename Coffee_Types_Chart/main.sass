@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two')
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400')
+
+$bg-color: #BAA898
+$ribbon-color: #5A3A31
+$expresso-col: #795548
+$steamed-milk-col: #DFDFDF
+$milk-foam-col: #D7CCC8
+$hot-water-col: #B3E5FC
+$chocolate-col: #3E2723
+$zero-auto: 0 auto
+$font: 'Lobster Two'
+$body-font: 'Work Sans'
+
+@mixin part-col($part-col)
+	border:
+		style: solid
+		width: .5em
+		color: $part-col
+
+%ba-base
+	content: ""
+	position: absolute
+	display: block
+
+%part-base
+	z-index: 2
+	position: absolute
+	height: .5em
+	border:
+		style: solid
+	
+%expresso
+	@extend %part-base
+	bottom: 20%
+	left: 1%
+	width: 90%
+	border:
+		width: 1.5em .25em 0 .25em
+		color: $expresso-col transparent
+
+%steamed-milk
+	@extend %part-base
+	bottom: 1.5em
+	left: -1%
+	width: 95%
+	border:
+		width: 1.5em .25em 0 .25em
+		color: $steamed-milk-col transparent
+
+%milk-foam
+	@extend %part-base
+	bottom: 3em
+	left: -8%
+	width: 100%
+	border:
+		width: 3em .5em 0 .5em
+		color: $milk-foam-col transparent
+
+%hot-water
+	@extend %part-base
+	bottom: 1.5em
+	left: -6%
+	width: 97%
+	border:
+		width: 3em .5em 0 .5em
+		color: $hot-water-col transparent
+	
+%chocolate
+	@extend %part-base
+	bottom: 3em
+	left: -4%
+	width: 101%
+	border:
+		width: 1.55em .25em 0 .25em
+		color: $chocolate-col transparent
+	
+body
+	background-color: $bg-color
+
+.coffee-container
+	width: 90%
+	margin: $zero-auto
+
+
+.title-wrapper
+	margin: $zero-auto
+	margin-bottom: 1.5em
+	width: 50%
+	position: relative
+	padding: .25em
+	background-color: $ribbon-color
+	font:
+		family: $font
+		size: 2.5em
+	text-align: center
+	color: #DEB887
+
+	&:before, &:after
+		@extend %ba-base
+		width: 1em
+		bottom: -.5em
+		border: .5em solid $ribbon-color
+		z-index: -2
+	&:before
+		left: -1em
+		border:
+			right-width: .5em
+			left-color: transparent
+	&:after
+		right: -1em
+		border:
+			left-width: .5em
+			right-color: transparent
+		
+	.title-content
+		text-align: center
+		margin-bottom: 2px
+		&:before , &:after
+			@extend %ba-base
+			bottom: -.5em
+			border-style: solid
+			border-color: darken( $ribbon-color, 15% ) transparent transparent transparent
+			z-index: -1
+		&:before
+			left: 0
+			border-width: .5em 0 0 1em
+		&:after
+			right: 0
+			border-width: .5em 1em 0 0
+
+.coffee-holder
+	margin: $zero-auto
+	width: 100%
+	max-width: 900px
+	height: auto
+	display: flex
+	flex:
+		direction: row
+		wrap: wrap
+	justify-content: space-around
+	align-content: space-around
+.coffee-type
+	width: 35%
+	max-width: 17.5em
+	background-color: #EFEBE9
+	border-radius: 3%
+	position: relative
+	display: block
+	margin: 0 auto 1.25em auto
+	font:
+		size: .85em
+		family: $body-font
+		weight: 400
+	color: #272124
+	display: block
+	.coffee-name
+		text-align: center
+		margin-bottom: .75em
+		padding: .5em 0
+	.parts-des
+		position: relative
+		margin-top: 1.5em
+		list-style-type: none
+		width: 80%
+		padding: .5em
+		margin: $zero-auto
+		li
+			display: block
+			text-indent: 2em
+            padding: 2px 0
+			&:before
+				@extend %ba-base
+		.e-n
+			&:before
+				@include part-col($expresso-col)
+		.hw-n
+			&:before
+				@include part-col($hot-water-col)
+		.sm-n
+			&:before
+				@include part-col($steamed-milk-col)
+		.mf-n
+			&:before
+				@include part-col($milk-foam-col)
+		.c-n
+			&:before
+				@include part-col($chocolate-col)
+			
+	.coffee-shape
+		margin: $zero-auto
+		width: 33%
+		height: 0
+		position: relative
+		border:
+			style: solid
+			width: 7em 1.25em 0 1.25em
+			color: #FAFAFA transparent
+	
+		.expresso
+			@extend %expresso
+		.steamed-milk
+			@extend %steamed-milk
+		.milk-foam
+			@extend %milk-foam
+		.hot-water
+			@extend %hot-water
+		.chocolate
+			@extend %chocolate
+	.mocha
+		.chocolate
+			bottom: 1.5em
+			left: -3%
+			width: 97%
+		.steamed-milk
+			bottom: 3em
+			left: -7%
+			width: 105%
+	.latte
+		.steamed-milk
+			left: -7%
+			width: 97%
+			border:
+				width: 3em .5em 0 .5em
+	.macchiato
+		.milk-foam
+			bottom: 1.5em
+			left: -3%
+			widtH: 97%
+			border:
+				width: 1.5em .25em 0 .25em
