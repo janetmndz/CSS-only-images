@@ -8,4 +8,5 @@ Collection of all CSS only images made on [CodePen](https://codepen.io/collectio
 - Birthday Cupcake
 - Coffee Types Chart
 - Ribbons
+- Pastel Macarons
 - Pyeongchang Olympic Mascots
