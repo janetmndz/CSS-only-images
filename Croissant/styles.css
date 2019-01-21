@@ -1,0 +1,99 @@
+html {
+  height: 100%;
+  background: #c79081;
+}
+
+body {
+  background: #c79081;
+}
+
+.plate {
+  position: relative;
+  margin: 5rem auto;
+  width: 22rem;
+  height: 21rem;
+  background: #e8ebf0;
+  border: 5px solid #f7f8fa;
+  border-radius: 100%;
+}
+
+.crossiant-container {
+  position: absolute;
+  left: 3.5rem;
+  width: 15rem;
+  height: 6.5rem;
+  -webkit-transform: scale(1.45);
+          transform: scale(1.45);
+}
+
+.crossiant-container.one {
+  top: 5rem;
+}
+
+.crossiant-container.two {
+  top: 9rem;
+}
+
+.crossiant-container .c__lefttip, .crossiant-container .c__righttip {
+  position: absolute;
+  z-index: 1;
+  width: 3rem;
+  height: 3rem;
+  top: 50%;
+}
+
+.crossiant-container .c__lefttip {
+  left: 16%;
+  border-radius: 25% 25% 25% 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#9a6026), color-stop(65%, #c37930), to(#d99f66));
+  background: linear-gradient(90deg, #9a6026 0%, #c37930 65%, #d99f66 100%);
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.crossiant-container .c__righttip {
+  right: 16%;
+  border-radius: 25% 25% 100% 25%;
+  background: -webkit-gradient(linear, right top, left top, from(#9a6026), color-stop(65%, #c37930), to(#d99f66));
+  background: linear-gradient(-90deg, #9a6026 0%, #c37930 65%, #d99f66 100%);
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.crossiant-container .c__left, .crossiant-container .c__right {
+  position: absolute;
+  z-index: 3;
+  width: 3rem;
+  height: 4rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9a6026), color-stop(40%, #c37930), to(#d99f66));
+  background: linear-gradient(0deg, #9a6026 0%, #c37930 40%, #d99f66 100%);
+  border-radius: 30% 30% 35% 45%;
+  top: 25%;
+}
+
+.crossiant-container .c__left {
+  left: 25%;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.crossiant-container .c__right {
+  right: 25%;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.crossiant-container .c__middle {
+  position: absolute;
+  z-index: 5;
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(-50deg, #9a6026 0%, #c37930 65%, #d99f66 100%);
+  border-radius: 25% 25%;
+  border-bottom-right-radius: 100%;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  top: -10%;
+  left: 33.3%;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,73 @@
+$background: #c79081
+$platecolor: #e8ebf0
+$croissant-color: #c37930
+
+=gradient($deg, $stop)
+	background: linear-gradient($deg, darken($croissant-color, 10%) 0%, $croissant-color $stop, lighten($croissant-color, 15%) 100%)
+
+html
+	height: 100%
+	background: $background
+body
+	background: $background
+
+.plate
+	position: relative
+	margin: 5rem auto
+	width: 22rem
+	height: 21rem
+	background: $platecolor
+	border: 5px solid lighten($platecolor, 5%)
+	border-radius: 100%
+
+.crossiant-container
+	position: absolute
+	left: 3.5rem
+	width: 15rem
+	height: 6.5rem
+	transform: scale(1.45)
+	&.one
+		top: 5rem
+	&.two
+		top: 9rem
+	.c__lefttip,.c__righttip
+		position: absolute
+		z-index: 1
+		width: 3rem
+		height: 3rem
+		top: 50%
+	.c__lefttip
+		left: 16%
+		border-radius: 25% 25% 25% 100%
+		+gradient(90deg, 65%)
+		transform: rotate(30deg)
+	.c__righttip
+		right: 16%
+		border-radius: 25% 25% 100% 25%
+		+gradient(-90deg, 65%)
+		transform: rotate(-30deg)
+	.c__left, .c__right
+		position: absolute
+		z-index: 3
+		width: 3rem
+		height: 4rem
+		+gradient(0deg, 40%)
+		border-radius: 30% 30% 35% 45%
+		top: 25%
+	.c__left
+		left: 25%
+		transform: rotate(135deg)
+	.c__right
+		right: 25%
+		transform: rotate(-135deg)
+	.c__middle
+		position: absolute
+		z-index: 5
+		width: 5rem
+		height: 5rem
+		+gradient(-50deg, 65%)
+		border-radius: 25% 25%
+		border-bottom-right-radius: 100%
+		transform: rotate(-135deg)
+		top: -10%
+		left: 33.3%

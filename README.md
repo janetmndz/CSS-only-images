@@ -7,6 +7,8 @@ Collection of all CSS only images made on [CodePen](https://codepen.io/collectio
 - Animal Ice Cream
 - Birthday Cupcake
 - Coffee Types Chart
+- Croissant
 - Ribbons
 - Pastel Macarons
+- Primary Planets
 - Pyeongchang Olympic Mascots
