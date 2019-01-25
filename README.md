@@ -10,5 +10,6 @@ Collection of all CSS only images made on [CodePen](https://codepen.io/collectio
 - Croissant
 - Ribbons
 - Pastel Macarons
+- Pink Cassette Tape
 - Primary Planets
 - Pyeongchang Olympic Mascots

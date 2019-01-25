@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title Pink Cassette Tape
+		link(rel="stylesheet" type="text/css" media="screen" href="/css/styles.css")
+	body
+		.container
+			.cassettee__base
+				.cassette__screws
+					- for (var i = 0; i < 4; i++)
+						.screw
+				.cassette__label
+					.wheel__container
+						.left_wheel
+							- for (var i = 0; i < 6; i++)
+								.tick
+						.right_wheel
+							- for (var i = 0; i < 6; i++)
+								.tick
+					.tape__container
+						.left__tape
+						.right__tape
+				.cassette__bottom
+					.circle_hole
+					.circle_hole
+					.rect_hole
+					.rect_hole
