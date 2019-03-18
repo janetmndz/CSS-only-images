@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css?family=Sigmar+One");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: #BBD5ED;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.frame__container {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  left: 50%;
+  right: auto;
+  width: 375px;
+  height: 375px;
+  border: 10px solid #FAFAFA;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  background: #B29DE8;
+  overflow: hidden;
+  -webkit-box-shadow: 4px 4px 12px 0px rgba(2, 3, 0, 0.35);
+          box-shadow: 4px 4px 12px 0px rgba(2, 3, 0, 0.35);
+}
+
+.frame__container .frida__container {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 350px;
+  height: 380px;
+}
+
+.font {
+  display: inline-block;
+  position: absolute;
+  top: calc(230px + 50%);
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  font-family: "Sigmar One", cursive;
+  font-size: 72px;
+  letter-spacing: 8px;
+  color: #C43C98;
+}
+
+.head__container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+}
+
+.head__container .ear {
+  position: absolute;
+  top: 33%;
+  width: 30px;
+  height: 40px;
+  border-radius: 100%;
+  background: #F9CCA3;
+}
+
+.head__container .ear .earring {
+  position: absolute;
+  bottom: -20px;
+  width: 8px;
+  height: 30px;
+  background: #DD68B8;
+  border-radius: 25% 25% 40% 40%;
+}
+
+.head__container .ear.left {
+  left: 0;
+  -webkit-box-shadow: inset 3px -6px 10px #f7bf8b;
+          box-shadow: inset 3px -6px 10px #f7bf8b;
+}
+
+.head__container .ear.left .earring {
+  left: 8px;
+}
+
+.head__container .ear.right {
+  right: 0;
+  -webkit-box-shadow: inset -3px -6px 10px #f7bf8b;
+          box-shadow: inset -3px -6px 10px #f7bf8b;
+}
+
+.head__container .ear.right .earring {
+  right: 8px;
+}
+
+.head__container .face__container {
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #F9CCA3;
+  width: 210px;
+  height: 225px;
+  border-radius: 80% 80% 200% 200%;
+  overflow: hidden;
+  -webkit-box-shadow: inset 0 -10px 15px #f7bf8b;
+          box-shadow: inset 0 -10px 15px #f7bf8b;
+}
+
+.head__container .face__container::before, .head__container .face__container::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  top: -4px;
+  background: #020300;
+  border-radius: 100%;
+}
+
+.head__container .face__container::before {
+  left: -25px;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.head__container .face__container::after {
+  right: -25px;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.head__container .face__container .eyebrow {
+  position: absolute;
+  top: 32%;
+  width: 55px;
+  height: 70px;
+  background: transparent;
+  border-top: 10px solid #020300;
+}
+
+.head__container .face__container .eyebrow.left {
+  left: 15%;
+  border-radius: 60% 25% 75% 95%;
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+}
+
+.head__container .face__container .eyebrow.right {
+  right: 15%;
+  border-radius: 25% 60% 75% 95%;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+}
+
+.head__container .face__container .middle {
+  position: absolute;
+  top: 75px;
+  bottom: 0;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 40px;
+  height: 8px;
+  background: repeating-linear-gradient(45deg, #020300, #020300 1px, transparent 0, transparent 5px);
+}
+
+.head__container .neck {
+  z-index: -5;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 50px;
+  height: 50px;
+  background: #f7bf8b;
+  border-radius: 25% 25% 50% 50%;
+}
+
+.head__container .shirt {
+  z-index: -10;
+  position: absolute;
+  top: auto;
+  bottom: -25px;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 200px;
+  height: 55px;
+  background: #C43C98;
+  border-radius: 150% 150% 0 0;
+}
+
+.head__container .hair__bun {
+  z-index: -1;
+  width: 210px;
+  height: 210px;
+  position: absolute;
+  top: -50px;
+  left: 20px;
+  background: #020300;
+  border-radius: 100%;
+}
+
+.hair__container {
+  position: absolute;
+  top: 13%;
+  bottom: auto;
+  left: 50%;
+  right: auto;
+  z-index: 5;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 250px;
+  height: 160px;
+}
+
+.hair__container .hair {
+  position: absolute;
+  background: transparent;
+  border-radius: 100%;
+  width: 65px;
+  height: 65px;
+}
+
+.hair__container .hair:nth-of-type(1) {
+  background: #020300;
+  top: 60px;
+  left: 5px;
+}
+
+.hair__container .hair:nth-of-type(2) {
+  background: #020300;
+  top: 25px;
+  left: 25px;
+}
+
+.hair__container .hair:nth-of-type(3) {
+  background: #020300;
+  top: 5px;
+  left: 60px;
+}
+
+.hair__container .hair:nth-of-type(4) {
+  background: #020300;
+  top: -5px;
+  left: 95px;
+}
+
+.hair__container .hair:nth-of-type(5) {
+  background: #020300;
+  top: 5px;
+  right: 60px;
+}
+
+.hair__container .hair:nth-of-type(6) {
+  background: #020300;
+  top: 25px;
+  right: 25px;
+}
+
+.hair__container .hair:nth-of-type(7) {
+  background: #020300;
+  top: 60px;
+  right: 5px;
+}
+
+.flowercrown__container {
+  z-index: 15;
+  position: absolute;
+  top: 13%;
+  bottom: auto;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 210px;
+  height: 150px;
+}
+
+.flowercrown__container .flower__hold {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+}
+
+.flowercrown__container .flower__hold .petal {
+  position: absolute;
+  border-radius: 50% 45% 50% 40%;
+}
+
+.flowercrown__container .flower__hold .petal:nth-of-type(1) {
+  width: 65px;
+  height: 65px;
+  -webkit-transform: rotateZ(30deg);
+          transform: rotateZ(30deg);
+  border-left: 6px solid;
+  border-right: 6px solid;
+}
+
+.flowercrown__container .flower__hold .petal:nth-of-type(2) {
+  position: absolute;
+  top: calc(50% - 28px);
+  left: calc(50% - 28px);
+  width: 50px;
+  height: 50px;
+  -webkit-transform: rotateZ(-30deg);
+          transform: rotateZ(-30deg);
+  border-left: 6px solid;
+  border-right: 6px solid;
+}
+
+.flowercrown__container .flower__hold .petal:nth-of-type(3) {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  width: 35px;
+  height: 35px;
+  -webkit-transform: rotateZ(15deg);
+          transform: rotateZ(15deg);
+  border-left: 4px solid;
+  border-right: 4px solid;
+}
+
+.flowercrown__container .flower__hold .petal:nth-of-type(4) {
+  position: absolute;
+  top: calc(50% - 14px);
+  left: calc(50% - 14px);
+  width: 22px;
+  height: 22px;
+  -webkit-transform: rotateZ(15deg);
+          transform: rotateZ(15deg);
+  border-left: 4px solid;
+  border-right: 4px solid;
+}
+
+.flowercrown__container .flower__hold:nth-of-type(1) {
+  top: 55px;
+  left: 0;
+}
+
+.flowercrown__container .flower__hold:nth-of-type(1) .petal {
+  background: #f4d03f;
+  border-left-color: #c29e0b;
+  border-right-color: #c29e0b;
+}
+
+.flowercrown__container .flower__hold:nth-of-type(2) {
+  top: 25px;
+  left: 70px;
+}
+
+.flowercrown__container .flower__hold:nth-of-type(2) .petal {
+  background: #d64541;
+  border-left-color: #92221f;
+  border-right-color: #92221f;
+}
+
+.flowercrown__container .flower__hold:nth-of-type(3) {
+  top: 55px;
+  left: 140px;
+}
+
+.flowercrown__container .flower__hold:nth-of-type(3) .petal {
+  background: #9b59b6;
+  border-left-color: #623475;
+  border-right-color: #623475;
+}
+
+.flowercrown__container .flower__hold .leaf {
+  z-index: -1;
+  position: absolute;
+  background: #ABDF75;
+  width: 40px;
+  height: 40px;
+  border-radius: 100% 0 100% 0;
+  border: 3px solid #92d54c;
+}
+
+.flowercrown__container .flower__hold .leaf:nth-of-type(5) {
+  top: 30px;
+  left: -5px;
+  -webkit-transform: rotateZ(-5deg);
+          transform: rotateZ(-5deg);
+}
+
+.flowercrown__container .flower__hold .leaf:nth-of-type(6) {
+  top: 30px;
+  right: -2px;
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One')
+$font: 'Sigmar One', cursive
+
+$purple: #B29DE8
+$green: #ABDF75
+$blue: #BBD5ED
+$black: #020300
+$white: #FAFAFA
+
+$skin: #F9CCA3
+$shirt: #C43C98
+$earring: #DD68B8
+
+=debug
+	border: 1px solid rgba(355,0,0,0.6)
+=absoluteposition($t,$b,$l,$r)
+	position: absolute
+	top: $t
+	bottom: $b
+	left: $l
+	right: $r
+=pseudobase
+	content: ''
+	display: block
+	position: absolute
+=petalcolor($c)
+	background: $c
+	border-left-color: darken($c, 20%)
+	border-right-color: darken($c, 20%)
+
+*, *::before, *::after
+	box-sizing: border-box
+	margin: 0 
+	padding: 0
+
+html, body
+	background: $blue
+	position: relative
+	width: 100%
+	height: 100%
+
+.frame__container
+	+absoluteposition(50%, auto, 50%, auto)
+	width: 375px
+	height: 375px
+	border: 10px solid $white
+	transform: translateY(-50%) translateX(-50%)
+	background: $purple
+	overflow: hidden
+	box-shadow: 4px 4px 12px 0px rgba($black, 0.35)
+	.frida__container
+		+absoluteposition(auto, 0, 50%, 0)
+		transform: translateX(-50%)
+		width: 350px
+		height: 380px
+	
+.font
+	display: inline-block
+	position: absolute
+	top: calc(230px + 50%)
+	left: 50%
+	transform: translateY(-50%) translateX(-50%)
+	font-family: $font
+	font-size: 72px
+	letter-spacing: 8px
+	color: $shirt
+	
+.head__container
+	position: absolute
+	bottom: 0
+	left: 50%
+	transform: translateX(-50%)
+	width: 250px
+	height: 250px
+	.ear
+		position: absolute
+		top: 33%
+		width: 30px
+		height: 40px
+		border-radius: 100%
+		background: $skin
+		& .earring
+				position: absolute
+				bottom: -20px
+				width: 8px
+				height: 30px
+				background: $earring
+				border-radius: 25% 25% 40% 40%
+		&.left
+			left: 0
+			box-shadow: inset 3px -6px 10px darken($skin, 5%)
+			& .earring
+				left: 8px
+		&.right
+			right: 0
+			box-shadow: inset -3px -6px 10px darken($skin, 5%)
+			& .earring
+				right: 8px
+		
+		
+	.face__container
+		+absoluteposition(0, auto, 50%, auto)
+		transform: translateX(-50%)
+		background: $skin
+		width: 210px
+		height: 225px 
+		border-radius: 80% 80% 200% 200%
+		overflow: hidden
+		box-shadow: inset 0 -10px 15px darken($skin, 5%)
+		&::before, &::after
+			+pseudobase
+			width: 150px
+			height: 60px
+			top: -4px
+			background: $black
+			border-radius: 100%
+		&::before
+			left: -25px
+			transform: rotate(-30deg)
+		&::after
+			right: -25px
+			transform: rotate(30deg)
+		.eyebrow
+			position: absolute
+			top: 32%
+			width: 55px
+			height: 70px
+			background: transparent
+			border-top: 10px solid $black
+			&.left
+				left: 15%
+				border-radius: 60% 25% 75% 95%
+				transform: rotate(3deg)
+			&.right
+				right: 15%
+				border-radius: 25% 60% 75% 95%
+				transform: rotate(-3deg)
+		.middle
+			+absoluteposition(75px, 0, 50%, auto)
+			transform: translateX(-50%)
+			width: 40px
+			height: 8px
+			background: repeating-linear-gradient(45deg, $black, $black 1px, transparent 0, transparent 5px)
+	.neck
+		z-index: -5
+		+absoluteposition(auto, 0, 50%, auto)
+		transform: translate(-50%)
+		width: 50px
+		height: 50px
+		background: darken($skin, 5%)
+		border-radius: 25% 25% 50% 50%
+	.shirt
+		z-index: -10
+		+absoluteposition(auto, -25px, 50%, auto)
+		transform: translate(-50%)
+		width: 200px
+		height: 55px
+		background: $shirt
+		border-radius: 150% 150% 0 0
+		
+	.hair__bun
+		z-index: -1
+		width: 210px 
+		height: 210px
+		position: absolute
+		top: -50px
+		left: 20px
+		background: $black
+		border-radius: 100%
+	
+.hair__container
+	+absoluteposition(13%, auto, 50%, auto)
+	z-index: 5
+	transform: translateX(-50%)
+	width: 250px
+	height: 160px
+	.hair
+		position: absolute
+		background: transparent
+		border-radius: 100%
+		width: 65px
+		height: 65px
+		&:nth-of-type(1)
+			background: $black
+			top: 60px
+			left: 5px
+		&:nth-of-type(2)
+			background: $black
+			top: 25px
+			left: 25px
+		&:nth-of-type(3)
+			background: $black
+			top: 5px
+			left: 60px
+		&:nth-of-type(4)
+			background: $black
+			top: -5px
+			left: 95px
+		&:nth-of-type(5)
+			background: $black
+			top: 5px
+			right: 60px
+		&:nth-of-type(6)
+			background: $black
+			top: 25px
+			right: 25px
+		&:nth-of-type(7)
+			background: $black
+			top: 60px
+			right: 5px
+	
+.flowercrown__container
+		z-index: 15
+		+absoluteposition(13%, auto, 50%, auto)
+		transform: translateX(-50%)
+		width: 210px
+		height: 150px
+		.flower__hold
+			position: absolute
+			width: 70px
+			height: 70px
+			.petal
+				position: absolute
+				border-radius: 50% 45% 50% 40%
+				&:nth-of-type(1)
+					width: 65px
+					height: 65px
+					transform: rotateZ(30deg)
+					border-left: 6px solid
+					border-right: 6px solid
+				&:nth-of-type(2)
+					position: absolute
+					top: calc(50% - 28px)
+					left: calc(50% - 28px)
+					width: 50px
+					height: 50px
+					transform: rotateZ(-30deg)
+					border-left: 6px solid
+					border-right: 6px solid
+				&:nth-of-type(3)
+					position: absolute
+					top: calc(50% - 20px)
+					left: calc(50% - 20px)
+					width: 35px
+					height: 35px
+					transform: rotateZ(15deg)
+					border-left: 4px solid
+					border-right: 4px solid
+				&:nth-of-type(4)
+					position: absolute
+					top: calc(50% - 14px)
+					left: calc(50% - 14px)
+					width: 22px
+					height: 22px
+					transform: rotateZ(15deg)
+					border-left: 4px solid
+					border-right: 4px solid
+			&:nth-of-type(1)
+				top: 55px
+				left: 0
+				.petal
+					+petalcolor(#f4d03f)	
+			&:nth-of-type(2)
+				top: 25px
+				left: 70px
+				.petal
+					+petalcolor(#d64541)
+			&:nth-of-type(3)
+				top: 55px
+				left: 140px
+				.petal
+					+petalcolor(#9b59b6)
+			.leaf
+				z-index: -1
+				position: absolute
+				background: $green
+				width: 40px
+				height: 40px
+				border-radius: 100% 0 100% 0
+				border: 3px solid darken($green, 10%)
+				&:nth-of-type(5)
+					top: 30px
+					left: -5px
+					transform: rotateZ(-5deg)
+				&:nth-of-type(6)
+					top: 30px
+					right: -2px
+					transform: rotateZ(90deg)
