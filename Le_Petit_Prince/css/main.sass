@@ -1,0 +1,89 @@
+$blue1: #C6DBF0
+$blue2: #AED1E6
+$blue3: #A0C4E2
+$blue4: #85C7DE
+
+$white: #E0E2DB
+
+$black1: #071108
+$black2: #474747
+
+$red: #AD343E
+
+$yellow: #F2AF29
+
+$font: "Raleway", san-serif
+$display: "Lobster", script
+
+*, *::before, *::after
+    box-sizing: border-box
+
+html, body
+    margin: 0
+    padding: 0
+    background: $white
+
+.book__wrapper
+    padding-top: 50px
+    position: relative
+    width: 95%
+    max-width: 800px
+    height: 600px
+    margin: 0 auto
+    display: grid 
+    grid-template-columns: 41% 8% 41%
+    grid-gap: 0px
+    color: #000000
+
+.book__section
+    background: $blue3 
+    box-shadow: 2px 2px 10px 0px transparentize($black2, 0.5)
+    height: 100%
+    overflow: hidden
+    &.left, &.right
+        display: flex
+        flex-direction: column
+        & .section__blurb
+            border: 1px solid $blue1
+            width: 100%
+            height: 15%
+            &:nth-of-type(1)
+                flex-basis: 10%
+            &:nth-of-type(2)
+                flex-basis: 20%
+            &:nth-of-type(3)
+                flex-basis: 70% 
+    &.left
+        border-radius: 1rem 0 0 1rem
+    &.right
+        &.left
+        border-radius: 0 1rem 1rem 0
+
+.middle
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    border-right: 1px solid $black2
+    border-left: 1px solid $black2
+    padding: 10px 0px 
+    .title
+        margin: 0
+        flex-grow: 2
+        display: inline-block
+        font-size: 2rem
+        line-height: 2
+        font-family: $display
+        writing-mode: vertical-rl
+        text-orientation: mixed
+        text-align: center
+        color: $blue1
+        text-shadow: 0px 0px 1px $black1
+        letter-spacing: 1px
+    .author
+        text-transform: uppercase
+        font-size: 0.75rem
+        font-family: $font
+        color: $black1
+        font-weight: 500 
+        text-align: center
+        letter-spacing: 1px
