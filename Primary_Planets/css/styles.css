@@ -32,351 +32,351 @@ html, body {
 .stars .star:nth-of-type(1) {
   width: 3px;
   height: 3px;
-  top: 69vh;
-  left: 80vw;
+  top: 17vh;
+  left: 48vw;
 }
 
 .stars .star:nth-of-type(2) {
-  width: 1px;
-  height: 1px;
-  top: 16vh;
-  left: 33vw;
+  width: 2px;
+  height: 2px;
+  top: 38vh;
+  left: 25vw;
 }
 
 .stars .star:nth-of-type(3) {
-  width: 1px;
-  height: 1px;
-  top: 72vh;
-  left: 58vw;
+  width: 4px;
+  height: 4px;
+  top: 50vh;
+  left: 13vw;
 }
 
 .stars .star:nth-of-type(4) {
   width: 2px;
   height: 2px;
-  top: 48vh;
-  left: 64vw;
+  top: 65vh;
+  left: 13vw;
 }
 
 .stars .star:nth-of-type(5) {
-  width: 3px;
-  height: 3px;
-  top: 87vh;
-  left: 34vw;
+  width: 4px;
+  height: 4px;
+  top: 78vh;
+  left: 5vw;
 }
 
 .stars .star:nth-of-type(6) {
-  width: 2px;
-  height: 2px;
-  top: 42vh;
-  left: 81vw;
+  width: 1px;
+  height: 1px;
+  top: 97vh;
+  left: 31vw;
 }
 
 .stars .star:nth-of-type(7) {
   width: 3px;
   height: 3px;
-  top: 28vh;
-  left: 41vw;
+  top: 15vh;
+  left: 28vw;
 }
 
 .stars .star:nth-of-type(8) {
-  width: 1px;
-  height: 1px;
-  top: 90vh;
-  left: 97vw;
+  width: 2px;
+  height: 2px;
+  top: 91vh;
+  left: 78vw;
 }
 
 .stars .star:nth-of-type(9) {
   width: 4px;
   height: 4px;
-  top: 67vh;
-  left: 28vw;
+  top: 21vh;
+  left: 35vw;
 }
 
 .stars .star:nth-of-type(10) {
-  width: 4px;
-  height: 4px;
-  top: 29vh;
-  left: 41vw;
+  width: 3px;
+  height: 3px;
+  top: 14vh;
+  left: 75vw;
 }
 
 .stars .star:nth-of-type(11) {
   width: 3px;
   height: 3px;
-  top: 9vh;
-  left: 40vw;
+  top: 50vh;
+  left: 99vw;
 }
 
 .stars .star:nth-of-type(12) {
-  width: 1px;
-  height: 1px;
-  top: 12vh;
-  left: 25vw;
+  width: 2px;
+  height: 2px;
+  top: 21vh;
+  left: 67vw;
 }
 
 .stars .star:nth-of-type(13) {
-  width: 2px;
-  height: 2px;
-  top: 94vh;
-  left: 47vw;
+  width: 4px;
+  height: 4px;
+  top: 90vh;
+  left: 20vw;
 }
 
 .stars .star:nth-of-type(14) {
-  width: 4px;
-  height: 4px;
-  top: 29vh;
-  left: 46vw;
+  width: 3px;
+  height: 3px;
+  top: 27vh;
+  left: 93vw;
 }
 
 .stars .star:nth-of-type(15) {
-  width: 4px;
-  height: 4px;
-  top: 93vh;
-  left: 34vw;
+  width: 3px;
+  height: 3px;
+  top: 38vh;
+  left: 36vw;
 }
 
 .stars .star:nth-of-type(16) {
-  width: 4px;
-  height: 4px;
-  top: 75vh;
-  left: 70vw;
+  width: 3px;
+  height: 3px;
+  top: 33vh;
+  left: 9vw;
 }
 
 .stars .star:nth-of-type(17) {
-  width: 3px;
-  height: 3px;
-  top: 12vh;
-  left: 7vw;
+  width: 2px;
+  height: 2px;
+  top: 2vh;
+  left: 59vw;
 }
 
 .stars .star:nth-of-type(18) {
   width: 2px;
   height: 2px;
-  top: 66vh;
-  left: 15vw;
+  top: 93vh;
+  left: 50vw;
 }
 
 .stars .star:nth-of-type(19) {
-  width: 4px;
-  height: 4px;
-  top: 51vh;
-  left: 4vw;
+  width: 3px;
+  height: 3px;
+  top: 92vh;
+  left: 82vw;
 }
 
 .stars .star:nth-of-type(20) {
-  width: 4px;
-  height: 4px;
-  top: 93vh;
-  left: 60vw;
+  width: 3px;
+  height: 3px;
+  top: 24vh;
+  left: 30vw;
 }
 
 .stars .star:nth-of-type(21) {
   width: 1px;
   height: 1px;
-  top: 25vh;
-  left: 43vw;
+  top: 77vh;
+  left: 36vw;
 }
 
 .stars .star:nth-of-type(22) {
-  width: 3px;
-  height: 3px;
-  top: 22vh;
-  left: 61vw;
+  width: 2px;
+  height: 2px;
+  top: 49vh;
+  left: 74vw;
 }
 
 .stars .star:nth-of-type(23) {
-  width: 1px;
-  height: 1px;
-  top: 92vh;
-  left: 52vw;
+  width: 3px;
+  height: 3px;
+  top: 80vh;
+  left: 24vw;
 }
 
 .stars .star:nth-of-type(24) {
-  width: 3px;
-  height: 3px;
-  top: 68vh;
-  left: 51vw;
+  width: 2px;
+  height: 2px;
+  top: 70vh;
+  left: 67vw;
 }
 
 .stars .star:nth-of-type(25) {
-  width: 3px;
-  height: 3px;
-  top: 66vh;
-  left: 59vw;
+  width: 4px;
+  height: 4px;
+  top: 49vh;
+  left: 54vw;
 }
 
 .stars .star:nth-of-type(26) {
-  width: 2px;
-  height: 2px;
-  top: 57vh;
-  left: 11vw;
+  width: 3px;
+  height: 3px;
+  top: 55vh;
+  left: 37vw;
 }
 
 .stars .star:nth-of-type(27) {
-  width: 3px;
-  height: 3px;
-  top: 43vh;
-  left: 3vw;
+  width: 2px;
+  height: 2px;
+  top: 36vh;
+  left: 13vw;
 }
 
 .stars .star:nth-of-type(28) {
-  width: 4px;
-  height: 4px;
-  top: 20vh;
-  left: 70vw;
+  width: 1px;
+  height: 1px;
+  top: 3vh;
+  left: 90vw;
 }
 
 .stars .star:nth-of-type(29) {
   width: 3px;
   height: 3px;
-  top: 72vh;
-  left: 13vw;
+  top: 64vh;
+  left: 83vw;
 }
 
 .stars .star:nth-of-type(30) {
-  width: 3px;
-  height: 3px;
-  top: 54vh;
-  left: 76vw;
+  width: 2px;
+  height: 2px;
+  top: 18vh;
+  left: 4vw;
 }
 
 .stars .star:nth-of-type(31) {
-  width: 2px;
-  height: 2px;
-  top: 76vh;
-  left: 3vw;
+  width: 4px;
+  height: 4px;
+  top: 27vh;
+  left: 21vw;
 }
 
 .stars .star:nth-of-type(32) {
   width: 4px;
   height: 4px;
-  top: 18vh;
-  left: 68vw;
+  top: 23vh;
+  left: 6vw;
 }
 
 .stars .star:nth-of-type(33) {
-  width: 4px;
-  height: 4px;
-  top: 77vh;
-  left: 91vw;
+  width: 2px;
+  height: 2px;
+  top: 72vh;
+  left: 55vw;
 }
 
 .stars .star:nth-of-type(34) {
-  width: 2px;
-  height: 2px;
-  top: 76vh;
-  left: 5vw;
+  width: 4px;
+  height: 4px;
+  top: 6vh;
+  left: 22vw;
 }
 
 .stars .star:nth-of-type(35) {
   width: 2px;
   height: 2px;
-  top: 7vh;
-  left: 96vw;
+  top: 78vh;
+  left: 62vw;
 }
 
 .stars .star:nth-of-type(36) {
-  width: 1px;
-  height: 1px;
-  top: 11vh;
-  left: 42vw;
+  width: 2px;
+  height: 2px;
+  top: 91vh;
+  left: 20vw;
 }
 
 .stars .star:nth-of-type(37) {
-  width: 4px;
-  height: 4px;
-  top: 35vh;
-  left: 54vw;
+  width: 1px;
+  height: 1px;
+  top: 83vh;
+  left: 28vw;
 }
 
 .stars .star:nth-of-type(38) {
-  width: 2px;
-  height: 2px;
-  top: 42vh;
-  left: 71vw;
+  width: 4px;
+  height: 4px;
+  top: 94vh;
+  left: 4vw;
 }
 
 .stars .star:nth-of-type(39) {
-  width: 4px;
-  height: 4px;
-  top: 70vh;
-  left: 43vw;
+  width: 3px;
+  height: 3px;
+  top: 60vh;
+  left: 77vw;
 }
 
 .stars .star:nth-of-type(40) {
-  width: 3px;
-  height: 3px;
-  top: 8vh;
-  left: 58vw;
+  width: 1px;
+  height: 1px;
+  top: 22vh;
+  left: 90vw;
 }
 
 .stars .star:nth-of-type(41) {
-  width: 4px;
-  height: 4px;
-  top: 71vh;
-  left: 21vw;
+  width: 2px;
+  height: 2px;
+  top: 69vh;
+  left: 36vw;
 }
 
 .stars .star:nth-of-type(42) {
-  width: 2px;
-  height: 2px;
-  top: 96vh;
-  left: 10vw;
+  width: 3px;
+  height: 3px;
+  top: 34vh;
+  left: 45vw;
 }
 
 .stars .star:nth-of-type(43) {
-  width: 4px;
-  height: 4px;
-  top: 47vh;
-  left: 1vw;
+  width: 1px;
+  height: 1px;
+  top: 30vh;
+  left: 40vw;
 }
 
 .stars .star:nth-of-type(44) {
   width: 3px;
   height: 3px;
-  top: 37vh;
-  left: 42vw;
+  top: 35vh;
+  left: 57vw;
 }
 
 .stars .star:nth-of-type(45) {
-  width: 2px;
-  height: 2px;
-  top: 78vh;
-  left: 75vw;
+  width: 4px;
+  height: 4px;
+  top: 55vh;
+  left: 93vw;
 }
 
 .stars .star:nth-of-type(46) {
-  width: 3px;
-  height: 3px;
-  top: 19vh;
-  left: 34vw;
+  width: 4px;
+  height: 4px;
+  top: 44vh;
+  left: 43vw;
 }
 
 .stars .star:nth-of-type(47) {
-  width: 4px;
-  height: 4px;
-  top: 94vh;
-  left: 19vw;
+  width: 1px;
+  height: 1px;
+  top: 93vh;
+  left: 2vw;
 }
 
 .stars .star:nth-of-type(48) {
-  width: 2px;
-  height: 2px;
-  top: 47vh;
-  left: 24vw;
+  width: 1px;
+  height: 1px;
+  top: 51vh;
+  left: 87vw;
 }
 
 .stars .star:nth-of-type(49) {
   width: 3px;
   height: 3px;
-  top: 65vh;
-  left: 56vw;
+  top: 32vh;
+  left: 53vw;
 }
 
 .stars .star:nth-of-type(50) {
-  width: 4px;
-  height: 4px;
-  top: 75vh;
-  left: 14vw;
+  width: 3px;
+  height: 3px;
+  top: 9vh;
+  left: 48vw;
 }
 
 .planet-orbit {

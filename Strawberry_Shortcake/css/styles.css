@@ -1,0 +1,145 @@
+html, body {
+  background: #f8e7df;
+}
+
+.cake__container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+}
+
+.plate {
+  position: absolute;
+  margin: 4rem 0 0 0;
+  width: 25rem;
+  height: 10rem;
+  border-radius: 100%;
+  background: radial-gradient(#F7F7F7 40%, #dedede 40%, #F7F7F7 43%, #eaeaea);
+}
+
+.cake {
+  position: relative;
+  margin: 0 auto;
+  width: 18rem;
+  height: 11rem;
+}
+
+.cakefrosting__side {
+  position: absolute;
+  top: -3.45rem;
+  left: 0rem;
+  border-left: 13rem solid transparent;
+  border-right: 5rem solid transparent;
+  border-bottom: 4rem solid #fdfbf9;
+}
+
+.cakefrosting__top {
+  position: relative;
+  background: #fdfbf9;
+  width: 100%;
+  height: 2rem;
+  border-radius: 15px 15px 0 0;
+}
+
+.cakefrosting__top::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: radial-gradient(closest-side, #fdfbf9, #fdfbf9 95%, transparent 95%);
+  background-position: 2.5rem;
+  background-size: 3rem 2rem;
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 2rem;
+  left: 0;
+  bottom: -0.5rem;
+}
+
+.cakefrosting__left {
+  position: absolute;
+  width: 5%;
+  height: 100%;
+  background: #fdfbf9;
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 10px 0;
+}
+
+.cakeinside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 5% 0 5%;
+  width: 90%;
+  height: 9rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ecc767' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-color: #f6e5b8;
+  -webkit-box-shadow: inset -10px 10px 30px #ecc767;
+          box-shadow: inset -10px 10px 30px #ecc767;
+  border-radius: 0 0 0 5px;
+}
+
+.cakeinside__filling {
+  position: relative;
+  background: #fdfbf9;
+  width: 100%;
+  height: 28%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  overflow: hidden;
+}
+
+.cakeinside__filling::before, .cakeinside__filling::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: #fdfbf9;
+}
+
+.cakeinside__filling::before {
+  bottom: 0;
+}
+
+.cakeinside__filling::after {
+  top: 0;
+}
+
+.cakeinside__filling .strawberry {
+  background: radial-gradient(transparent 5%, #f6514d 50%, #f4221c 80%);
+  width: 25%;
+  height: 150%;
+  margin: 5px 0 0 0;
+  border: 2px dashed #dc100b;
+  border-radius: 100%;
+}
+
+.cakeinside__filling .strawberry:nth-of-type(2) {
+  margin: -25px 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+/*# sourceMappingURL=styles.css.map */
